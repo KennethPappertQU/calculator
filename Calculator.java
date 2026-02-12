@@ -9,7 +9,7 @@ public class Calculator {
         System.out.print("Enter another number: ");
         int secondNum = in.nextInt();
 
-        System.out.print("Would you like to add or subtract? ");
+        System.out.print("Would you like to add, subtract, multiply, or divide? ");
         String response = in.next();
 
         switch (response) {
@@ -20,6 +20,14 @@ public class Calculator {
             case "subtract":
             case "subtraction":
                 System.out.println(subtractNum(firstNum, secondNum));
+                break;
+            case "multiply":
+            case "multiplication":
+                System.out.println(multiplyNum(firstNum, secondNum));
+                break;
+            case "divide":
+            case "division":
+                System.out.println(divideNum(firstNum, secondNum));
                 break;
             default:
                 System.out.println("Incorrect Input");
@@ -34,6 +42,12 @@ public class Calculator {
     }
     public static int subtractNum (int first, int second) {
         return first - second;
+    }
+    public static int multiplyNum (int first, int second) {
+        return first * second;
+    }
+    public static int divideNum (int first, int second) {
+        return first / second;
     }
 }
 
