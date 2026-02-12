@@ -4,10 +4,10 @@ public class Calculator {
     public static void main(String [] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a number: ");
-        int firstNum = in.nextInt();
+        float firstNum = in.nextFloat();
 
         System.out.print("Enter another number: ");
-        int secondNum = in.nextInt();
+        float secondNum = in.nextFloat();
 
         System.out.print("Would you like to add, subtract, multiply, or divide? ");
         String response = in.next();
@@ -37,16 +37,16 @@ public class Calculator {
         in.close();
     }
 
-    public static int addNums (int first, int second) {
+    public static float addNums (float first, float second) {
         return first + second;
     }
-    public static int subtractNum (int first, int second) {
+    public static float subtractNum (float first, float second) {
         return first - second;
     }
-    public static int multiplyNum (int first, int second) {
+    public static float multiplyNum (float first, float second) {
         return first * second;
     }
-    public static int divideNum (int first, int second) {
+    public static float divideNum (float first, float second) {
         return first / second;
     }
 }
