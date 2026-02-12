@@ -15,19 +15,19 @@ public class Calculator {
         switch (response) {
             case "add":
             case "addition":
-                System.out.println(addNums(firstNum, secondNum));
+                addNums(firstNum, secondNum);
                 break;
             case "subtract":
             case "subtraction":
-                System.out.println(subtractNum(firstNum, secondNum));
+                subtractNum(firstNum, secondNum);
                 break;
             case "multiply":
             case "multiplication":
-                System.out.println(multiplyNum(firstNum, secondNum));
+                multiplyNum(firstNum, secondNum);
                 break;
             case "divide":
             case "division":
-                System.out.println(divideNum(firstNum, secondNum));
+                divideNum(firstNum, secondNum);
                 break;
             default:
                 System.out.println("Incorrect Input");
@@ -37,17 +37,21 @@ public class Calculator {
         in.close();
     }
 
-    public static float addNums (float first, float second) {
-        return first + second;
+    public static void addNums (float first, float second) {
+        System.out.println(first + second);
     }
-    public static float subtractNum (float first, float second) {
-        return first - second;
+    public static void subtractNum (float first, float second) {
+        System.out.println(first - second);
     }
-    public static float multiplyNum (float first, float second) {
-        return first * second;
+    public static void multiplyNum (float first, float second) {
+        System.out.println(first * second);
     }
-    public static float divideNum (float first, float second) {
-        return first / second;
+    public static void divideNum (float first, float second) {
+        if (second == 0) {
+            System.out.print("Error: Divide By Zero");
+        } else {
+             System.out.println(first / second);
+        }
     }
 }
 
